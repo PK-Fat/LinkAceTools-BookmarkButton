@@ -1,0 +1,9 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+
+# web-ext build output
+web-ext-artifacts/
+*.kate-swp

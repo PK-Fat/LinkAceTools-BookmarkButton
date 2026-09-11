@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>LinkAce Tools: Bookmark Button — Options</title>
+<style>
+  :root {
+    color-scheme: light dark;
+  }
+  body {
+    margin: 0;
+    padding: 20px;
+    font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: #1e1e2e;
+    color: #cdd6f4;
+    width: 380px;
+  }
+  h1 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+    color: #89b4fa;
+  }
+  p.hint {
+    font-size: 12px;
+    color: #a6adc8;
+    margin: 0 0 14px 0;
+    line-height: 1.4;
+  }
+  label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    margin-top: 14px;
+  }
+  label:first-of-type {
+    margin-top: 0;
+  }
+  fieldset {
+    border: 1px solid #45475a;
+    border-radius: 6px;
+    padding: 10px 12px 12px;
+    margin: 0 0 16px 0;
+  }
+  legend {
+    font-size: 12px;
+    font-weight: 600;
+    color: #a6adc8;
+    padding: 0 4px;
+  }
+  .mode-option {
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    margin: 6px 0;
+    cursor: pointer;
+  }
+  .mode-option input {
+    margin-right: 8px;
+  }
+  input[type="url"],
+  input[type="password"],
+  input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 10px;
+    font-size: 13px;
+    border: 1px solid #45475a;
+    border-radius: 6px;
+    background: #313244;
+    color: #cdd6f4;
+    font-family: inherit;
+  }
+  input:focus {
+    outline: none;
+    border-color: #89b4fa;
+  }
+  .token-row {
+    position: relative;
+  }
+  .token-row button {
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    bottom: 6px;
+    padding: 0 8px;
+    font-size: 11px;
+    background: #45475a;
+    color: #cdd6f4;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  p.token-hint {
+    font-size: 11px;
+    color: #a6adc8;
+    margin: 6px 0 0 0;
+    line-height: 1.4;
+  }
+  button#saveBtn {
+    margin-top: 16px;
+    width: 100%;
+    padding: 9px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1e1e2e;
+    background: #89b4fa;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  button#saveBtn:hover {
+    background: #a6c1fb;
+  }
+  #status {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #a6e3a1;
+    min-height: 16px;
+  }
+  #status.error {
+    color: #f38ba8;
+  }
+</style>
+</head>
+<body>
+  <h1>LinkAce Tools: Bookmark Button</h1>
+  <p class="hint">
+    Connects directly to your LinkAce instance's API — no login popup needed.
+    Both values are stored only on this device (not synced through your
+    browser account).
+  </p>
+
+  <fieldset>
+    <legend>Where should this open?</legend>
+    <label class="mode-option">
+      <input type="radio" name="uiMode" value="sidebar"> Sidebar — click the toolbar icon to open the panel
+    </label>
+    <label class="mode-option">
+      <input type="radio" name="uiMode" value="popup"> Toolbar popup — click the toolbar icon to open a dropdown
+    </label>
+  </fieldset>
+
+  <label for="baseUrl">LinkAce instance URL</label>
+  <input type="url" id="baseUrl" placeholder="https://links.example.com" />
+
+  <label for="apiToken">API token</label>
+  <div class="token-row">
+    <input type="password" id="apiToken" placeholder="Paste your API token" />
+    <button type="button" id="toggleToken">Show</button>
+  </div>
+  <p class="token-hint">
+    Generate one from your LinkAce instance under
+    <em>User Settings &gt; API Tokens</em>.
+  </p>
+
+  <button id="saveBtn">Save</button>
+  <div id="status"></div>
+  <script src="options.js"></script>
+</body>
+</html>
