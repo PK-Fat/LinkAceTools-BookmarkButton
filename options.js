@@ -1,3 +1,12 @@
+// ============================================================================
+//  LinkAce Tools: Bookmark Button — options.js
+//  A production of The Ministry of Digital Affairs
+//  https://github.com/PK-Fat/LinkAceTools-BookmarkButton · MIT License
+// ============================================================================
+//
+// Settings page — instance URL, API token, and toolbar/sidebar mode.
+// (Saving a new URL/token makes the form re-fetch its list/tag suggestions.)
+
 const baseUrlInput = document.getElementById("baseUrl");
 const apiTokenInput = document.getElementById("apiToken");
 const toggleTokenBtn = document.getElementById("toggleToken");

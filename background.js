@@ -1,4 +1,8 @@
-// LinkAce Tools: Bookmark Button — background script.
+// ============================================================================
+//  LinkAce Tools: Bookmark Button — background.js
+//  A production of The Ministry of Digital Affairs
+//  https://github.com/PK-Fat/LinkAceTools-BookmarkButton · MIT License
+// ============================================================================
 //
 // The add-link form (sidebar.html) is shared between two UI modes:
 //   1. Sidebar mode (default — matches this extension's original,

@@ -1,28 +1,38 @@
 {
   "manifest_version": 3,
   "name": "LinkAce Tools: Bookmark Button",
-  "version": "1.5.0",
-  "description": "Adds a one-click 'Add to LinkAce' button — in the toolbar or sidebar, your choice — using your LinkAce API token, no login popup needed. Supports adding lists and tags with autocomplete suggestions. Configure your instance URL and token in the extension's options.",
+  "version": "2.0.0",
+  "description": "One-click 'Add to LinkAce' button in the toolbar or sidebar, using your API token — no login popup. Predictive lists & tags show your existing ones as you type. From The Ministry of Digital Affairs.",
   "browser_specific_settings": {
     "gecko": {
       "id": "linkace-tools-sidebar-button@pkfat.net",
       "strict_min_version": "140.0",
       "data_collection_permissions": {
-        "required": ["none"]
+        "required": [
+          "none"
+        ]
       }
     },
     "gecko_android": {
       "strict_min_version": "142.0"
     }
   },
-  "permissions": ["tabs", "scripting", "storage"],
-  "host_permissions": ["<all_urls>"],
+  "permissions": [
+    "tabs",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
   "options_ui": {
     "page": "options.html",
     "open_in_tab": false
   },
   "background": {
-    "scripts": ["background.js"]
+    "scripts": [
+      "background.js"
+    ]
   },
   "action": {
     "default_title": "Add to LinkAce",

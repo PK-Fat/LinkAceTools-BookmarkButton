@@ -1,4 +1,5 @@
 # .github/workflows/publish-extension.yml
+# A production of The Ministry of Digital Affairs
 #
 # Builds LinkAce Tools: Bookmark Button on tag push, signs it via Mozilla AMO
 # (listed channel, so point releases also go out to the public AMO

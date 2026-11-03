@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<!--
+  LinkAce Tools: Bookmark Button — sidebar.html
+  A production of The Ministry of Digital Affairs
+  The add-link form, shared by popup mode and sidebar mode.
+-->
 <html>
 <head>
 <meta charset="utf-8">
@@ -52,16 +57,14 @@
   }
   .suggestions {
     display: none;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: calc(100% + 4px);
+    /* In-flow (not absolute) so the toolbar popup grows to fit the list
+       instead of clipping it. */
+    margin-top: 4px;
     background: #313244;
     border: 1px solid #45475a;
     border-radius: 6px;
-    max-height: 140px;
+    max-height: 168px;
     overflow-y: auto;
-    z-index: 10;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
   }
   .suggestions.open {
@@ -72,9 +75,22 @@
     font-size: 12px;
     cursor: pointer;
   }
-  .suggestion-item:hover,
   .suggestion-item.active {
     background: #45475a;
+  }
+  .suggestion-item strong {
+    color: #89b4fa;
+    font-weight: 700;
+  }
+  .suggestion-hint {
+    padding: 6px 9px;
+    font-size: 11px;
+    font-style: italic;
+    color: #a6adc8;
+    border-top: 1px solid #45475a;
+  }
+  .suggestion-hint:first-child {
+    border-top: none;
   }
   button#addBtn {
     width: 100%;
@@ -121,7 +137,7 @@
   <div class="field">
     <label for="listsInput">Lists</label>
     <div class="autocomplete">
-      <input type="text" id="listsInput" placeholder="e.g. Reading, Recipes" autocomplete="off" />
+      <input type="text" id="listsInput" placeholder="Start typing to see your lists…" autocomplete="off" />
       <div class="suggestions" id="listsSuggestions"></div>
     </div>
   </div>
@@ -129,7 +145,7 @@
   <div class="field">
     <label for="tagsInput">Tags</label>
     <div class="autocomplete">
-      <input type="text" id="tagsInput" placeholder="e.g. firefox, dev" autocomplete="off" />
+      <input type="text" id="tagsInput" placeholder="Start typing to see your tags…" autocomplete="off" />
       <div class="suggestions" id="tagsSuggestions"></div>
     </div>
   </div>
